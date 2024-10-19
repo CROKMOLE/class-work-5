@@ -1,0 +1,31 @@
+<html>   
+   <head>
+      <title>JavaScript Animation</title>      
+      <script type = "text/javascript">
+            var imgObj = null;
+            
+            function init() {
+               imgObj = document.getElementById('myImage');
+               imgObj.style.position= 'relative'; 
+               imgObj.style.left = '0px'; 
+            }
+            function moveRight() {
+               imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+            }
+            
+            window.onload = init;
+      </script>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   
+   <body>   
+      <form>
+         <img id = "myImage" src = "/images/arrow.jpeg" />
+         <p>Click button below to move the image to right</p>
+         <label>
+            <input type="text" value="Email">
+         </label>
+         <input type = "button" value = "Subscribe" onclick = "moveRight();" class="input-button" />
+      </form>      
+   </body>
+</html>
